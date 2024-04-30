@@ -7,6 +7,8 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ### Create a new post
 
+创建一个新文章
+
 ``` bash
 $ hexo new "My New Post"
 ```
