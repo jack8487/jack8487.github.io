@@ -6,10 +6,12 @@
   
   <title>Jack&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="excerpt_description">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Jack&#39;s Blog">
 <meta property="og:url" content="https://jack8487-github-io.pages.dev/index.html">
 <meta property="og:site_name" content="Jack&#39;s Blog">
+<meta property="og:description" content="excerpt_description">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="Jack">
 <meta name="twitter:card" content="summary">
@@ -95,24 +97,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>如今的互联网用户体验离不开出色的性能和正常运行时间。为此，企业需要运行多个<br>相同的副本，并将负载分散在整个系统集群上。随着负载的增加，集群内会引入新的<br>副本。这种架构技术称为水平扩展。基于软件的基础架构因其灵活性而愈发受欢迎，<br>并创造了更多的可能性。无论是仅有两个系统副本组成的高可用性方案，还是全球范<br>围内成千上万个系统构成的大型集群，它们都需要一款像基础架构一样动态的负载均<br>衡解决方案。NGINX 能够以多种方式满足这一需求，例如 HTTP、TCP 和用户数据报<br>协议（UDP）负载均衡，本文将会对这些内容进行详细介绍</p>
-<h1 id="HTTP-负载均衡"><a href="#HTTP-负载均衡" class="headerlink" title="HTTP 负载均衡"></a>HTTP 负载均衡</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>将负载分发到两台或多台HTTP服务器</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在 NGINX 的 HTTP 模块内使用 upstream 代码块对 HTTP 服务器实施负载均衡</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">upstream backend &#123;</span><br><span class="line">	server 10.10.12.45:80 				weight=1;</span><br><span class="line">	server app.example.com:80 		weight=2;</span><br><span class="line">	server spare.example.com:80		backup;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://backend;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>该配置对端口 80 的两台 HTTP 服务器实施负载均衡，然后再将另一台服务器定义为 backup，以便在两台主服务器不可用时发挥作用。weight 参数指示 NGINX 向第二台 服务器传输两倍的请求，它的默认值为 1</p>
-<h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><p>HTTP 的 upstream 模块控制着 HTTP 负载均衡。该模块定义了一个目标池 —— 它可 以是 Unix 套接字、IP 地址和 DNS（域名服务）记录的任意组合，也可以是它们的混 合使用配置。upstream 模块还定义了如何将任一个请求分发给任何上游（upstream） 服务器。</p>
-<h1 id="负载均衡方式"><a href="#负载均衡方式" class="headerlink" title="负载均衡方式"></a>负载均衡方式</h1><ul>
-<li>轮询</li>
-<li>最少链接</li>
-<li>通用哈希</li>
-<li>随机</li>
-</ul>
-
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>如今的互联网用户体验离不开出色的性能和正常运行时间。为此，企业需要运行多个相同的副本，并将负载分散在整个系统集群上。随着负载的增加，集群内会引入新的副本。这种架构技术称为水平扩展。基于软件的基础架构因其灵活性而愈发受欢迎，并创造了更多的可能性。无论是仅有两个系统副本组成的高可用性方案，还是全球范围内成千上万个系统构成的大型集群，它们都需要一款像基础架构一样动态的负载均衡解决方案。NGINX 能够以多种方式满足这一需求，例如 HTTP、TCP 和用户数据报协议（UDP）负载均衡，本文将会对这些内容进行详细介绍</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/05/04/Nginx/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvrbpx7l0001isvsc6q3dp3v" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvrcne5100019kvs1t3ngab8" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -148,205 +142,16 @@
       
         <h1><center>煤矿深部开采冲击地压危险预测</center></h1>
 
-<p>煤炭是中国的主要能源和重要的工业原料。然而，随着开采深度的增加，地应力增大，井下煤岩动力灾害风险越来越大，严重影响着煤矿的安全高效开采。在各类深部煤岩动力灾害事故中，冲击地压已成为威胁中国煤矿安全生产最重要的灾害之一，冲击地压事故易造成严重的人员伤亡和财产损失。近年来，研究人员进行了大量深入的研究，采取了许多防控措施，中国煤矿安全形势持续稳步改善。但是，冲击地压事故仍时有发生，煤矿安全形势依然严峻，冲击地压的监测预警和有效防控仍是煤矿安全生产中亟待解决的科技问题。在深部煤矿开采过程中，可以监测声发射(AE)和电磁辐射(EMR)信号，电磁辐射和声发射传感器每30秒采集一个数据，可通过这些数据的变化趋势判断目前工作面或巷道是否存在冲击地压危险。电磁辐射和声发射数据随着采煤工作面的推进波动，一般在冲击地压发生前数天(如0-7天，即大约冲击地压发生前7天内)会有一些趋势性前兆特征，因此我们将电磁辐射和声发射数据分为5类，(A)正常工作数据；(B)前兆特征数据；(C)干扰信号数据；(D)传感器断线数据；(E)工作面休息数据，其中，A、B、C 类为工作面正常生产时的数据，D类为监测系统不正常时的数据，E类为停产期间的数据。附件1给出了2019年1月9日-2020年1月7日采集的电磁辐射和声发射数据，并且标记出了所对应的A、B、C类以及D或者E类(D&#x2F;E)数据。请建立数学模型，完成以下问题：<br>　　问题1：如图1，已知现场工作面的部分电磁辐射和声发射信号中存在大量干扰信号，有可能是工作面的其他作业或设备干扰等因素引起，这对后期的电磁辐射和声发射信号处理造成了一定的影响。应用附件1和2中的数据，完成以下问题。</p>
-<p>　　<center><img src="/2024/05/01/2024-51MCM-Problem%20C/1.svg"><br>图1 以电磁辐射为例的干扰信号数据示意图</center></p>
-<p>​			(1.1) 建立数学模型，对存在干扰的电磁辐射和声发射信号进行分析，分别给出电磁辐射和声发射中的干扰信号数据的特征(不少于3个)。</p>
-<p>​			(1.2) 利用问题(1.1)中得到的特征，建立数学模型，对2022年5月1日-2022年5月30日的电磁辐射和2022年4月1日-2022年5月30日及2022年10月10日-2022年11月10日声发射信号中的干扰信号所在的时间区间进行识别，分别给出电磁辐射和声发射最早发生的5个干扰信号所在的区间，完成表1和表2。</p>
-<center>表1 电磁辐射干扰信号时间区间</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">时间区间起点</th>
-<th align="center">时间区间终点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<center>表2 声发射干扰信号时间区间</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">时间区间起点</th>
-<th align="center">时间区间终点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p>　　问题2：已知在发生冲击地压危险前约7天内，电磁辐射和声发射信号存在随时间循环增大的趋势(如图2所示)，这类信号我们称为前兆特征信号。在出现前兆特征信号之后的约7天内，有可能发生冲击地压，所以一般情况下出现前兆特征信号之后，会采取一定措施尽可能的防止冲击地压发生。应用附件1和2中的数据，完成以下问题。</p>
-<p>　　　　<center><img src="/2024/05/01/2024-51MCM-Problem%20C/2.svg"><br>图2 以声发射为例的前兆特征信号示意图</center></p>
-<p>​	(2.1) 建立数学模型，对电磁辐射和声发射信号中的前兆特征信号进行分析，重点分析信号的变化趋势，分别给出电磁辐射和声发射信号危险发生前(前兆特征)数据的趋势特征(不少于3个)。<br>　　(2.2) 利用问题(2.1)中得到的特征，建立数学模型，对2020年4月8日-2020年6月8日及2021年11月20日-2021年12月20日的电磁辐射和2021年11月1日-2022年1月15日声发射信号中的前兆特征所在的时间区间进行识别，分别给出电磁辐射和声发射信号最早发生的5个前兆特征信号所在的时间区间，完成表3和表4。</p>
-<center>表3 电磁辐射前兆特征时间区间</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">时间区间起点</th>
-<th align="center">时间区间终点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<center>表4 声发射前兆特征时间区间</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">序号</th>
-<th align="center">时间区间起点</th>
-<th align="center">时间区间终点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">1</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">4</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">5</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p>　　问题3：为了尽早的识别前兆特征信号，在前兆特征信号出现的第一时间发出预警，需要在每次数据采集的时刻对危险进行预判。附件3给出了一些非连续时间段采集的电磁辐射和声发射信号数据。请建立数学模型，给出附件3中的每个时间段最后时刻出现前兆特征数据的概率，完成表5。</p>
-<center>表5 采集数据所在时刻出现前兆特征的概率</center>
-
-<table>
-<thead>
-<tr>
-<th align="center">电磁辐射数据所在时刻</th>
-<th align="center">前兆特征的概率</th>
-<th align="center">声发射数据所在时刻</th>
-<th align="center">前兆特征的概率</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">2023-1-24 23:58:36</td>
-<td align="center"></td>
-<td align="center">2023-1-24 23:58:36</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2023-2-11 23:59:20</td>
-<td align="center"></td>
-<td align="center">2023-2-11 23:59:20</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2023-2-26 23:59:27</td>
-<td align="center"></td>
-<td align="center">2023-2-26 23:59:27</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2023-3-10 23:58:14</td>
-<td align="center"></td>
-<td align="center">2023-3-10 23:58:14</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">2023-3-30 23:58:13</td>
-<td align="center"></td>
-<td align="center">2023-3-30 23:58:13</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-
+<p>煤炭是中国的主要能源和重要的工业原料。然而，随着开采深度的增加，地应力增大，井下煤岩动力灾害风险越来越大，严重影响着煤矿的安全高效开采。在各类深部煤岩动力灾害事故中，冲击地压已成为威胁中国煤矿安全生产最重要的灾害之一，冲击地压事故易造成严重的人员伤亡和财产损失。近年来，研究人员进行了大量深入的研究，采取了许多防控措施，中国煤矿安全形势持续稳步改善。但是，冲击地压事故仍时有发生，煤矿安全形势依然严峻，冲击地压的监测预警和有效防控仍是煤矿安全生产中亟待解决的科技问题。在深部煤矿开采过程中，可以监测声发射(AE)和电磁辐射(EMR)信号，电磁辐射和声发射传感器每30秒采集一个数据，可通过这些数据的变化趋势判断目前工作面或巷道是否存在冲击地压危险。电磁辐射和声发射数据随着采煤工作面的推进波动，一般在冲击地压发生前数天(如0-7天，即大约冲击地压发生前7天内)会有一些趋势性前兆特征，因此我们将电磁辐射和声发射数据分为5类，(A)正常工作数据；(B)前兆特征数据；(C)干扰信号数据；(D)传感器断线数据；(E)工作面休息数据，其中，A、B、C 类为工作面正常生产时的数据，D类为监测系统不正常时的数据，E类为停产期间的数据。附件1给出了2019年1月9日-2020年1月7日采集的电磁辐射和声发射数据，并且标记出了所对应的A、B、C类以及D或者E类(D&#x2F;E)数据。请建立数学模型，完成以下问题：</p>
+        
+          <p class="article-more-link">
+            <a href="/2024/05/01/2024-51MCM-Problem%20C/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/2024-51MCM-Problem%20C/" data-id="clvrbpx7g0000isvsaeri7y10" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/2024-51MCM-Problem%20C/" data-id="clvrcne4x00009kvse8cz75yn" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -381,76 +186,15 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>可以在配置或<font color="blue">代替配置文件</font>中修改大部分的配置</p>
-<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">title</td>
-<td align="center">网站标题</td>
-</tr>
-<tr>
-<td align="center">subtitle</td>
-<td align="center">网站副标题</td>
-</tr>
-<tr>
-<td align="center">description</td>
-<td align="center">网站描述</td>
-</tr>
-<tr>
-<td align="center">keywords</td>
-<td align="center">网站的关键词且支持多个关键词</td>
-</tr>
-<tr>
-<td align="center">author</td>
-<td align="center">作者名字</td>
-</tr>
-<tr>
-<td align="center">language</td>
-<td align="center">网站使用的语言。不同主题可能需要设置成不同的值,需要参考主题的文档自行设置，常见的有<code>zh-Hans</code>和 <code>zh-CN</code>。</td>
-</tr>
-<tr>
-<td align="center">timezone</td>
-<td align="center">网站时区。Hexo 默认使用您电脑的时区。请参考 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">时区列表</a> 进行设置，如 <code>America/New_York</code>, <code>Japan</code>, 和 <code>UTC</code> 。一般的，对于中国大陆地区可以使用 <code>Asia/Shanghai</code>。</td>
-</tr>
-</tbody></table>
-<h2 id="网址"><a href="#网址" class="headerlink" title="网址"></a>网址</h2><table>
-<thead>
-<tr>
-<th align="center">参数</th>
-<th align="center">描述</th>
-<th align="center">默认值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><font color="red"><code>url</code></font></td>
-<td align="center">网站必须以<font color="red"><code>http://</code></font>或<font color="red"><code>https://</code></font>开头</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><font color="red"><code>root</code></font></td>
-<td align="center">网站根目录</td>
-<td align="center"><font color="red"><code>url&#39;s pathname</code></font></td>
-</tr>
-<tr>
-<td align="center"><font color="red"><code>permalink</code></font></td>
-<td align="center">文章的永久链接格式</td>
-<td align="center"><font color="red"><code>:year/:month/:day/:title/</code></font></td>
-</tr>
-<tr>
-<td align="center"><font color="red"><code>permalink_defaults</code></font></td>
-<td align="center">永久链接中各部分的默认值</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<h2 id="what"><a href="#what" class="headerlink" title="what"></a>what</h2>
+        
+          <p class="article-more-link">
+            <a href="/2024/04/30/%E9%85%8D%E7%BD%AE/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E9%85%8D%E7%BD%AE/" data-id="clvrbpx7n0003isvsd8ncfvpa" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E9%85%8D%E7%BD%AE/" data-id="clvrcne5500059kvscoz54lpl" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -484,31 +228,16 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Typora-字体颜色设置"><a href="#Typora-字体颜色设置" class="headerlink" title="Typora 字体颜色设置"></a>Typora 字体颜色设置</h2><p>1.font标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">font</span> <span class="attr">color</span>=<span class="string">&#x27;red&#x27;</span>&gt;</span>红色<span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>2.span标签</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&#x27;color:文字颜色;background:背景颜色;font-size:文字大小;font-family:字体;&#x27;</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="框框字"><a href="#框框字" class="headerlink" title="框框字"></a>框框字</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`框框`</span></span><br></pre></td></tr></table></figure>
-
-<p><code>zh-Hans</code></p>
-<p><code>wo</code></p>
-<h2 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;&lt;/img&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-
+        <h2 id="Typora-字体颜色设置"><a href="#Typora-字体颜色设置" class="headerlink" title="Typora 字体颜色设置"></a>Typora 字体颜色设置</h2>
+        
+          <p class="article-more-link">
+            <a href="/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvrbpx7m0002isvs3x701tih" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvrcne5200029kvsftwugwd6" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -547,7 +276,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="clvrbpx7o0004isvs9ys40x60" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="clvrcne5300049kvs2n0l7jjf" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -582,34 +311,15 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>这是一个基于Hexo框架搭建的一个个人Blog,主要用于存放个人学习心得与感悟</p>
-<h1 id="Hexo-入门"><a href="#Hexo-入门" class="headerlink" title="Hexo 入门"></a>Hexo 入门</h1><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<p>欢迎来到 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>！这是您的第一篇文章。更多信息请查看 <a target="_blank" rel="noopener" href="https://hexo.io/docs/">文档</a>。如果您在使用 Hexo 时遇到任何问题，可以在 <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> 中找到答案，也可以在 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a> 上询问我。</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><p>新建一个文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><p>运行服务器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><p>生成静态文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><p>部署到远程站点</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-<h3 id="以上操作一行指令解决解决"><a href="#以上操作一行指令解决解决" class="headerlink" title="以上操作一行指令解决解决"></a>以上操作一行指令解决解决</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<p><a href="https://jack8487-github-io.pages.dev/">https://jack8487-github-io.pages.dev/</a></p>
-
+        
+          <p class="article-more-link">
+            <a href="/2024/04/30/hello-world/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/hello-world/" data-id="clvrbpx7o0005isvsb5vzb303" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/hello-world/" data-id="clvrcne5300039kvs7r694uzv" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       

@@ -14,7 +14,7 @@
 <meta property="og:description" content="简介如今的互联网用户体验离不开出色的性能和正常运行时间。为此，企业需要运行多个相同的副本，并将负载分散在整个系统集群上。随着负载的增加，集群内会引入新的副本。这种架构技术称为水平扩展。基于软件的基础架构因其灵活性而愈发受欢迎，并创造了更多的可能性。无论是仅有两个系统副本组成的高可用性方案，还是全球范围内成千上万个系统构成的大型集群，它们都需要一款像基础架构一样动态的负载均衡解决方案。NGINX 能">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-05-03T23:12:24.128Z">
-<meta property="article:modified_time" content="2024-05-03T23:38:39.034Z">
+<meta property="article:modified_time" content="2024-05-04T00:09:40.014Z">
 <meta property="article:author" content="Jack">
 <meta name="twitter:card" content="summary">
   
@@ -97,7 +97,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>如今的互联网用户体验离不开出色的性能和正常运行时间。为此，企业需要运行多个<br>相同的副本，并将负载分散在整个系统集群上。随着负载的增加，集群内会引入新的<br>副本。这种架构技术称为水平扩展。基于软件的基础架构因其灵活性而愈发受欢迎，<br>并创造了更多的可能性。无论是仅有两个系统副本组成的高可用性方案，还是全球范<br>围内成千上万个系统构成的大型集群，它们都需要一款像基础架构一样动态的负载均<br>衡解决方案。NGINX 能够以多种方式满足这一需求，例如 HTTP、TCP 和用户数据报<br>协议（UDP）负载均衡，本文将会对这些内容进行详细介绍</p>
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>如今的互联网用户体验离不开出色的性能和正常运行时间。为此，企业需要运行多个相同的副本，并将负载分散在整个系统集群上。随着负载的增加，集群内会引入新的副本。这种架构技术称为水平扩展。基于软件的基础架构因其灵活性而愈发受欢迎，并创造了更多的可能性。无论是仅有两个系统副本组成的高可用性方案，还是全球范围内成千上万个系统构成的大型集群，它们都需要一款像基础架构一样动态的负载均衡解决方案。NGINX 能够以多种方式满足这一需求，例如 HTTP、TCP 和用户数据报协议（UDP）负载均衡，本文将会对这些内容进行详细介绍</p>
+<span id="more"></span>
+
 <h1 id="HTTP-负载均衡"><a href="#HTTP-负载均衡" class="headerlink" title="HTTP 负载均衡"></a>HTTP 负载均衡</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>将负载分发到两台或多台HTTP服务器</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在 NGINX 的 HTTP 模块内使用 upstream 代码块对 HTTP 服务器实施负载均衡</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">upstream backend &#123;</span><br><span class="line">	server 10.10.12.45:80 				weight=1;</span><br><span class="line">	server app.example.com:80 		weight=2;</span><br><span class="line">	server spare.example.com:80		backup;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">	location / &#123;</span><br><span class="line">		proxy_pass http://backend;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -114,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvrbpx7l0001isvsc6q3dp3v" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvrcne5100019kvs1t3ngab8" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
