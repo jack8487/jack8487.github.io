@@ -14,7 +14,7 @@
 <meta property="og:description" content="杂笔">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-30T09:31:42.069Z">
-<meta property="article:modified_time" content="2024-05-08T02:58:52.696Z">
+<meta property="article:modified_time" content="2024-05-08T03:05:34.477Z">
 <meta property="article:author" content="Jack">
 <meta name="twitter:card" content="summary">
   
@@ -112,15 +112,16 @@
 <h2 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span><span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;&quot;&gt;&lt;/img&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="公式渲染"><a href="#公式渲染" class="headerlink" title="公式渲染"></a>公式渲染</h2><p>安装插件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
-<p>对根目录下的<code>/node_modules/kramed/lib/rules/inline.js</code>稍加修改：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var inline = &#123;</span><br><span class="line">  // 第2行修改</span><br><span class="line">  escape: /^\\([`*\[\]()#$+\-.!_&gt;])/,</span><br><span class="line">  ...</span><br><span class="line">  // 第20行修改（也可能是21行）</span><br><span class="line">  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>编辑/themes/next/_config.yml文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-math --save</span><br></pre></td></tr></table></figure>
+<p>对根目录下的_config.yml稍加修改：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">math:</span><br><span class="line">  katex:</span><br><span class="line">    css: &#x27;https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css&#x27;</span><br><span class="line">    options:</span><br><span class="line">      throwOnError: false</span><br><span class="line">  mathjax:</span><br><span class="line">    css: &#x27;https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css&#x27;</span><br><span class="line">    options:</span><br><span class="line">      conversion:</span><br><span class="line">        display: false</span><br><span class="line">      tex:</span><br><span class="line">      svg:</span><br></pre></td></tr></table></figure>
+<p>使用这种方式时，文章是<strong>默认开启</strong>公式渲染的，如果需要禁用则在文章开头写如下配置：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">mathjax: false</span><br><span class="line">---</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvx8iwni0002ekvs95ok4jlf" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvx8mhh60001ycvsev333tt8" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
