@@ -75,6 +75,116 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-yolo算法初学" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/07/yolo%E7%AE%97%E6%B3%95%E5%88%9D%E5%AD%A6/" class="article-date">
+  <time class="dt-published" datetime="2024-05-07T14:10:47.000Z" itemprop="datePublished">2024-05-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/05/07/yolo%E7%AE%97%E6%B3%95%E5%88%9D%E5%AD%A6/">yolo算法初学</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="yolo算法"><a href="#yolo算法" class="headerlink" title="yolo算法"></a>yolo算法</h1><h1 id="指标分析"><a href="#指标分析" class="headerlink" title="指标分析"></a>指标分析</h1><p>$$<br>Precision &#x3D; {TP\over{TP + FP}}<br>$$</p>
+<p>$$<br>Recall&#x3D;{TP\over{TP+FN}}<br>$$</p>
+<p>$$<br>Accuracy &#x3D; \frac{TP+TN}{TP+FP+FN+TN}<br>$$</p>
+<p>$$<br>F1_{score} &#x3D; \frac{2<em>Precision</em>Recall}{Precison+Recall}<br>$$</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>相关(Relevant),正类</th>
+<th>无关(NonRelevant),负类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>被检索到(Retireved)</td>
+<td>true positives(TP)</td>
+<td>false positives(FP)</td>
+</tr>
+<tr>
+<td>未被检索到(Not Retireved)</td>
+<td>false positives(TP)</td>
+<td>true negatives(TN)</td>
+</tr>
+</tbody></table>
+<p>T&#x2F;N：表示预测的对错</p>
+<p>P&#x2F;N：表示预测的结果</p>
+<p>$$<br>IoU &#x3D; \frac{Area  \ of \ Overlap}{Area \ of \ Union}<br>$$</p>
+<ul>
+<li>if IoU &gt;&#x3D; 0.5 True Positive(TP)</li>
+<li>if IoU &lt; 0.5 False Positive(FP)</li>
+<li>如果存在却没有检测到 False Negative(FN)</li>
+<li>检测到了但是没有用处 True Negative(TN)</li>
+<li>AP衡量的是学习出来的模型在<span style="color:blue">每个类别</span>上的好坏(Average Precision)</li>
+<li>MAP衡量的是学出的模型在<span style="color:blue">所有类别</span>上的好坏。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/07/yolo%E7%AE%97%E6%B3%95%E5%88%9D%E5%AD%A6/" data-id="clvx83h570005wgvs6mwj54vi" data-title="yolo算法初学" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-vim学习" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/05/vim%E5%AD%A6%E4%B9%A0/" class="article-date">
+  <time class="dt-published" datetime="2024-05-05T03:50:52.000Z" itemprop="datePublished">2024-05-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/05/05/vim%E5%AD%A6%E4%B9%A0/">vim学习</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/05/vim%E5%AD%A6%E4%B9%A0/" data-id="clvx83h570004wgvsciux9cak" data-title="vim学习" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Nginx" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/05/04/Nginx/" class="article-date">
@@ -106,7 +216,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvszjca80001skvsgl49bw1t" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/04/Nginx/" data-id="clvx83h540001wgvsd6jm9sl6" data-title="Nginx" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -151,7 +261,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/2024-51MCM-Problem%20C/" data-id="clvszjca30000skvsdqyk672b" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/2024-51MCM-Problem%20C/" data-id="clvx83h510000wgvsbctq8ij5" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -194,7 +304,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E9%85%8D%E7%BD%AE/" data-id="clvszjcac0005skvs5hrgf8ks" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E9%85%8D%E7%BD%AE/" data-id="clvx83h580007wgvs1fp00401" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -237,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvszjcaa0002skvs6v4mhlh2" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="clvx83h560002wgvs11t88uf7" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -276,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="clvszjcaa0003skvsfyhe3qfe" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="clvx83h580006wgvs6t6b1zv3" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -319,7 +429,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/hello-world/" data-id="clvszjcab0004skvs6jdhgevp" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/hello-world/" data-id="clvx83h560003wgvs53880r66" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -362,6 +472,14 @@
       <ul>
         
           <li>
+            <a href="/2024/05/07/yolo%E7%AE%97%E6%B3%95%E5%88%9D%E5%AD%A6/">yolo算法初学</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/05/vim%E5%AD%A6%E4%B9%A0/">vim学习</a>
+          </li>
+        
+          <li>
             <a href="/2024/05/04/Nginx/">Nginx</a>
           </li>
         
@@ -371,14 +489,6 @@
         
           <li>
             <a href="/2024/04/30/%E9%85%8D%E7%BD%AE/">配置</a>
-          </li>
-        
-          <li>
-            <a href="/2024/04/30/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/">杂笔</a>
-          </li>
-        
-          <li>
-            <a href="/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/">五一计划</a>
           </li>
         
       </ul>
