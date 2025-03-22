@@ -73,6 +73,66 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git密钥生成与部署" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2025/03/22/git%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%E4%B8%8E%E9%83%A8%E7%BD%B2/" class="article-date">
+  <time class="dt-published" datetime="2025-03-22T03:04:34.000Z" itemprop="datePublished">2025-03-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2025/03/22/git%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%E4%B8%8E%E9%83%A8%E7%BD%B2/">git密钥生成与部署</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>在github上配置ssh key很容易，网上一大堆教程，但基本没有详细解释其原理的，为什么要配？每使用一台主机都要配？配了为啥就不用密码了？下面将简单通俗地解释一下。</p>
+<p>我们在往github上push项目的时候，如果走https的方式，每次都需要输入账号密码，非常麻烦。而采用ssh的方式，就不再需要输入，只需要在github自己账号下配置一个ssh key即可。</p>
+<h3 id="配置SSH"><a href="#配置SSH" class="headerlink" title="配置SSH"></a>配置SSH</h3><p>git使用ssh配置，基本需要两步</p>
+<ol>
+<li><p>生成密钥</p>
+<blockquote>
+<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#64;&#x78;&#120;&#x78;&#x2e;&#x63;&#111;&#109;">&#x78;&#120;&#120;&#64;&#x78;&#120;&#x78;&#x2e;&#x63;&#111;&#109;</a>“</p>
+</blockquote>
+</li>
+<li><p>id_rsa.pub部署在github上</p>
+</li>
+</ol>
+<p>验证：</p>
+<blockquote>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#x74;&#x40;&#103;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a></p>
+</blockquote>
+<p>出现如下字样即代表部署成功</p>
+<blockquote>
+<p>Hi xxxxxx&#x2F;xxxxxx.github.io! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/git%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%E4%B8%8E%E9%83%A8%E7%BD%B2/" data-id="cm8jmup1p0002t8tmec6p2x9k" data-title="git密钥生成与部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-git设置代理" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/03/22/git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" class="article-date">
@@ -104,7 +164,7 @@
 <blockquote>
 <ul>
 <li>HTTP 形式：git clone <a target="_blank" rel="noopener" href="https://github.com/test.git">https://github.com/test.git</a></li>
-<li>SSH 形式：git clone <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a>:Jack&#x2F;test.git</li>
+<li>SSH 形式：git clone <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#117;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a>:Jack&#x2F;test.git</li>
 </ul>
 </blockquote>
 <h1 id="一、HTTP形式"><a href="#一、HTTP形式" class="headerlink" title="一、HTTP形式"></a>一、HTTP形式</h1><h2 id><a href="#" class="headerlink" title></a></h2><h2 id="Http代理"><a href="#Http代理" class="headerlink" title="Http代理"></a>Http代理</h2><blockquote>
@@ -141,7 +201,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" data-id="cm8jmkgnk0002rstmbcvv4tqq" data-title="git设置代理" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/" data-id="cm8jmup1q0003t8tm4hf9gxxq" data-title="git设置代理" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -247,7 +307,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/%E9%85%8D%E7%BD%AE/" data-id="cm8jmkgnr0008rstmfe8ledi3" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/%E9%85%8D%E7%BD%AE/" data-id="cm8jmup1w000bt8tm966wcd0p" data-title="配置" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -309,7 +369,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/hello-world/" data-id="cm8jmkgno0005rstmastkdpk3" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/hello-world/" data-id="cm8jmup1s0005t8tm5y3eh5jr" data-title="Jack&#39;s Learn Hexo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -367,7 +427,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="cm8jmkgnh0001rstm4pds5ybt" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/" data-id="cm8jmup1o0001t8tmc9iv7pm1" data-title="杂笔" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -601,7 +661,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/2024-51MCM-Problem%20C/" data-id="cm8jmkgne0000rstmbzym89vi" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2025/03/22/2024-51MCM-Problem%20C/" data-id="cm8jmup1l0000t8tmeo7palte" data-title="2024年第二十一届五一数学建模竞赛题目" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -644,7 +704,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/photo/" data-id="cm8jmkgnm0003rstm9nhc9zoj" data-title="photo" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/05/01/photo/" data-id="cm8jmup1s0006t8tm4e6ld1ve" data-title="photo" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -683,7 +743,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="cm8jmkgnr0007rstmbkkr571o" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://jack8487-github-io.pages.dev/2024/04/30/%E4%BA%94%E4%B8%80%E8%AE%A1%E5%88%92/" data-id="cm8jmup1s0007t8tmh8ycf1ma" data-title="五一计划" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -740,6 +800,10 @@
       <ul>
         
           <li>
+            <a href="/2025/03/22/git%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90%E4%B8%8E%E9%83%A8%E7%BD%B2/">git密钥生成与部署</a>
+          </li>
+        
+          <li>
             <a href="/2025/03/22/git%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86/">git设置代理</a>
           </li>
         
@@ -753,10 +817,6 @@
         
           <li>
             <a href="/2025/03/22/Typora%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2%E8%AE%BE%E7%BD%AE/">杂笔</a>
-          </li>
-        
-          <li>
-            <a href="/2025/03/22/2024-51MCM-Problem%20C/">2024年第二十一届五一数学建模竞赛题目</a>
           </li>
         
       </ul>
